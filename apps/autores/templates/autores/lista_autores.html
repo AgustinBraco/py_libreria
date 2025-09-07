@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Autores</title>
+  </head>
+  <body>
+    <h1>Autores disponibles</h1>
+
+    <div>
+      {% for autor in autores %}
+      <p>
+        {{ autor.nombre }} {{ autor.apellido }} - {{ autor.fecha_nacimiento }}
+      </p>
+      {% empty %}
+      <p>No hay autores disponibles</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>

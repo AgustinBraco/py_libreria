@@ -5,12 +5,13 @@
   </head>
   <body>
     <h1>Libros disponibles</h1>
-    <ul>
+
+    <div>
       {% for libro in libros %}
-      <li>{{ libro.titulo }} - {{ libro.paginas }} páginas</li>
+      <p>{{ libro.titulo }} - {{ libro.paginas }} paginas - {{ libro.fecha_publicacion }}</p>
       {% empty %}
-      <li>No hay libros disponibles</li>
+      <p>No hay libros disponibles</p>
       {% endfor %}
-    </ul>
+    </div>
   </body>
 </html>
