@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Libros</title>
+  </head>
+  <body>
+    <h1>Libros disponibles</h1>
+    <ul>
+      {% for libro in libros %}
+      <li>{{ libro.titulo }} - {{ libro.paginas }} páginas</li>
+      {% empty %}
+      <li>No hay libros disponibles</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
