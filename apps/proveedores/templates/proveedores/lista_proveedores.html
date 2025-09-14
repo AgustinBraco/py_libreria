@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Proveedores</title>
+  </head>
+  <body>
+    <h1>Proveedores disponibles</h1>
+
+    <div>
+      {% for proveedor in proveedores %}
+      <div>
+        <h2>Proveedor N°{{ proveedor.id }}</h2>
+        <div>
+          <p>Nombre: {{ proveedor.nombre }}</p>
+          <p>Razón social: {{ proveedor.razon_social }}</p>
+          <p>Cuit: {{ proveedor.cuit }}</p>
+          <br />
+        </div>
+      </div>
+      {% empty %}
+      <p>No hay proveedores disponibles</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>

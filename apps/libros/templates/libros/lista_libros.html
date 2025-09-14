@@ -8,7 +8,15 @@
 
     <div>
       {% for libro in libros %}
-      <p>{{ libro.titulo }} - {{ libro.paginas }} paginas - {{ libro.fecha_publicacion }}</p>
+      <div>
+        <h2>Libro N°{{ libro.id }}</h2>
+        <div>
+          <p>Título: {{ libro.titulo }}</p>
+          <p>Descripción: {{ libro.descripcion }}</p>
+          <p>Precio: $ {{ libro.precio }}</p>
+          <br />
+        </div>
+      </div>
       {% empty %}
       <p>No hay libros disponibles</p>
       {% endfor %}
